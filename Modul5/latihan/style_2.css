@@ -1,0 +1,41 @@
+p.dotted{border-style: dotted;border-color: rgb(25, 0, 255);}
+p.dashed{border-style: dashed;}
+p.solid{border-style: solid;}
+p.double{border-style: double;}
+p.groove{border-style: groove;}
+p.ridge{border-style: ridge;}
+p.inset{border-style: inset;}
+p.outset{border-style: outset;}
+p.none{border-style: none;}
+
+.h4{
+    color: rgb(240, 230, 140);
+}
+.h5{
+    color: rgb(230, 230, 250);
+}
+.kotak1{
+    border:1px solid black;
+    background-color: rgb(135, 222, 142);
+}
+.kotak2{
+    border:1px solid black;
+    padding:40px;
+    background-color: rgb(222, 135, 168);
+}
+.kotak3{
+    border:1px solid black;
+    background-color:brown;
+}
+.kotak4{
+    border:1px solid black;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: burlywood;
+}
+
+.gambar{
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+}
