@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-image:url("1.jpg");
+  background-size: contain;
+  font-family: sans-serif;
+}
+
+.body {
+grid-area: content;
+}
+.sidebar{
+grid-area: sidebar;
+background: linear-gradient(to right, rgb(255, 230, 0), rgb(235, 250, 105),
+ rgb(191, 253, 110)) ;
+justify-content: center;
+}
+.footer {
+grid-area: footer;
+background: linear-gradient(to right, rgb(255, 230, 0), rgb(235, 250, 105),
+ rgb(191, 253, 110)) ;
+}
+.table {
+font-size: 1.5em;
+width: 100%;
+min-height: fit-content;
+display: grid;
+grid-template-areas: "sidebar" "content" "footer";
+grid-template-columns: 1fr;
+grid-template-rows: 130px 800px 250px;
+
+}
+
+.content, .sidebar, .footer{
+padding: 1em;
+}
+
+nav ul {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: space-between;
+text-align: center;
+}
+
+nav li{
+list-style: none;
+padding: 1em 0;
+}
+
+nav li a {
+color: rgb(211, 75, 75);
+font-weight: 700;
+opacity: 0.6;
+text-decoration: none;
+transition: 0.3s;
+}
+
+nav li a:hover {
+opacity: 1;
+}
+.isi {
+max-width: 90 px;
+margin: 0 auto;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.4);
+}
+
+.isi img {
+width: 250px;
+align-content: center;
+}
+
+.isi h1 {
+color: #ffffff;
+align-content: center;
+}
+
+.isi h2 {
+  color: #ffffff;
+  align-content: center;
+  }
+
+.isi p {
+
+color: #ecf2f3;
+
+}
+footer ul {
+  max-width: 640px;
+  margin: 2em auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  
+  }
+  
+  footer ul li {
+      list-style: none;
+      align-self: flex-end;
+  }
+  
+  footer ul li a{
+      text-decoration: none;
+      color: #c1c6ce;
+  }
+  
+  footer ul li img {
+      width: 30%;
+  }
+  
+@media (min-width: 1040px){
+  .table {
+      grid-template-areas:"sidebar content" "sidebar footer" ;
+      grid-template-rows: 1fr auto ;
+      grid-template-columns: 300px 1f;
+      
+  }
+
+  nav ul{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: auto;
+  }
+  nav li a {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.3s;
+    }
+  .sidebar{
+      background: linear-gradient( #13313D, #22A45A,#01877E) ;
+      padding-top: 150px;
+  }
+  .isi{
+      text-align: left;
+      margin: 7em 0;
+      background-color: rgba(255, 255, 255, 0.4);
+  }
+  .isi img {
+      width: 200px;
+      float: right;
+  }
+  .isi h1{
+      font-size: 3em;
+  }
+  .isi p{
+      width: 60%;
+  }
+  footer ul {
+      max-width: 900px;
+      margin: auto;
+  }
+
+  footer ul li a img {
+      width: 20%;
+  }
+}
