@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Gallery</title>
+    <link rel="stylesheet" href="lembartugas.css">
+</head>
+<body>
+    <!--javascript-->
+    <script lang="javascript">
+        alert("Welcome to the Online Gallery");
+        var hari = new Array("Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu");
+        var bulan = new Array("Jan","Feb","Mar","Apr","Jun","Jul","Agus","Sep","Okt","Nov","Dec");
+        var date = new Date();
+        var hariini = hari[date.getDay()-1];
+        var tanggal = date.getDate();
+        var bln = bulan[date.getMonth()];
+        var tahun = date.getFullYear();
+        var jam = date.getHours();
+        var menit = date.getMinutes();
+        var detik = date.getSeconds();
+        var tampilTanggalwaktu = "Tanggal: " + hariini + ", " + tanggal + " " + bln + " " + tahun + " Jam: " + jam + ":" + menit + ":" + detik;
+        alert(tampilTanggalwaktu);
+        console.log(tampilTanggalwaktu)
+        function salah(){
+                var nama = (document.dform.nama.value);
+                if(nama==""){
+                    document.getElementById("namafokus").style.background="#bc6c25";
+                }
+            }
+        function salah2(){
+            var nim = (document.dform.nim.value);
+                if(nim==""){
+                    document.getElementById("nimfokus").style.background="#bc6c25";
+                }
+        }
+        function data(){
+            var jurusan = (document.dform.jurusan.value);
+            document.dform.ojurusan.value = jurusan;
+            var keterangan = (document.dform.keterangan.value);
+            document.dform.oket.value = keterangan;
+        }
+        function terimakasih(){
+                if((document.dform.nama.value!="")&&(document.dform.nim.value!="")){
+                    alert("Terima kasih telah mengisi data");
+                }
+                else{
+                    alert("Mohon dilengkapi");
+                }
+            }        
+    </script>
+    <nav>
+        <div class="isi">
+            <div class="namaweb">Online Gallery</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="isi">
+        <!-- untuk home -->
+        <section id="home">
+            <img src="welcome.png">
+            <script src="ubahimg.js" type="text/javascript"></script>
+            <div class="kolom">
+                <p class="deskripsi">Online Gallery</p>
+                <h2>Take A Photo, Save Later</h2>
+                <p>Online Gallery dirancang untuk menampilkan hasil foto dan album. Fitur perlindungan Galeri yang cepat, ringan dan pribadi menjadikannya sebagai website galeri alternatif terbaik.
+                    Ini adalah Galeri dan album foto yang sempurna untuk Anda. Online Gallery dapat dimanfaatkan untuk mempromosikan foto Anda.</p>
+                    
+            </div>
+        </section>
+        <!-- untuk login -->
+        <section id="login">
+            <img src="login.png">
+            <div class="kolom">
+                <p class="deskripsi">Online Gallery</p>
+                <h2>R E G I S T R A S I</h2>
+             <form name="dform">
+            <pre>
+                Nama      : <input type="text" name="nama" id="namafokus" onblur="salah()">
+                NIM       : <input type="text" name="nim" id="nimfokus" onblur="salah2()">
+                Gender    : <input type="radio" value ="perempuan" name="keterangan">Perempuan
+                            <input type="radio" value ="laki-laki" name="keterangan">Laki-laki
+                Jurusan   : <select name="jurusan">
+                    <option>Pilih</option>
+                    <option value="teknik informatika">Teknik Informatika</option>
+                    <option value="teknik sipil">Teknik Sipil</option>
+                    <option value="teknik mesin">Teknik Mesin</option>
+                    </select>
+            </pre>
+            <div class="input">
+                        <input type="button" value="masukkan" onClick="terimakasih()">
+                        <input type="reset" value="reset">
+            </div>
+            </form>
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <div class="wrapper">
+            <div class="isifooter">
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p>Indonesia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <p>Instagram : Online Gallery</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
